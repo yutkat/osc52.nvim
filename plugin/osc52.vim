@@ -30,7 +30,7 @@ if &clipboard !~# '\<unnamedplus\>'
   finish
 endif
 
-let s:max_bytes = 10000
+let s:max_bytes = 100000
 let s:osc52_copy = {lines, regtype ->
       \ [
       \ execute('let s:buf = printf("\x1b]52;;%s\x1b\\", system("base64", join(lines, "\n")))'),
